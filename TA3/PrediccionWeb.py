@@ -6,9 +6,10 @@ import base64
 from skimage.transform import resize
 import numpy as np
 
+
 from keras.models import load_model
 
-model = load_model('modelopip_entrenado.h5')
+model = load_model('modelo_entrenado.h5')
 app = Flask(__name__, template_folder="templates/")
 
 @app.route("/")
@@ -47,11 +48,12 @@ def show_predictions():
     componentes = nums.split(', ')
     nums = [float(componente) for componente in componentes]
     frutas = ["Platano", "Pera", "Manzana"]
+    calamares =["Cuadrado", "Circulo","Paraguas", "Estrella"]
     if img_data is not None:
-        return render_template('Prediccion.html', nums=nums, frutas=frutas, img_data=img_data)
+        return render_template('Prediccion.html', nums=nums, calamar=calamares, img_data=img_data)
     else:
         return redirect("/", code=302)
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)

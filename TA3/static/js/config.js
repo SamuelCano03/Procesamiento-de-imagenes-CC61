@@ -8,13 +8,15 @@ return Math.floor(Math.random() * (max - min) ) + min;
 
 function InitThis() {
   ctx = document.getElementById('myCanvas').getContext("2d");
+  
 
   numero = getRndInteger(0, 10);
   letra = ["Manzana", "Pera", "Platano"];
+  letra=["Cuadrado", "Circulo","Paraguas", "Estrella"]
   random = Math.floor(Math.random() * letra.length);
   aleatorio = letra[random];
 
-  document.getElementById('mensaje').innerHTML  = 'Dibuja una fruta (Platano, Pera, Manzana)';
+  document.getElementById('mensaje').innerHTML  = 'Dalgona Candy Challenge!! Dibuja correctamente un círculo, cuadrado, estrella o paraguas... o morirás!!';
   document.getElementById('numero').value = aleatorio;
 
   $('#myCanvas').mousedown(function (e) {
@@ -53,6 +55,7 @@ function Draw(x, y, isDown) {
 function clearArea() {
   ctx.setTransform(1, 0, 0, 1, 0, 0);
   ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+  
 }
 
 function prepareImg() {

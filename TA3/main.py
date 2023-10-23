@@ -25,7 +25,7 @@ main_html = """
 
 
       numero = getRndInteger(0, 10);
-      /*letra = ["Manzana", "Pera", "Platano"];*/
+      
       letra=["Cuadrado", "Circulo","Paraguas", "Estrella"];
       random = Math.floor(Math.random() * letra.length);
       aleatorio = letra[random];
@@ -130,7 +130,7 @@ def upload():
 @app.route('/prepare', methods=['GET'])
 def prepare_dataset():
     images = []
-    d = ["Platano", "Pera", "Manzana"]
+    #d = ["Platano", "Pera", "Manzana"]
     d=["Cuadrado", "Circulo","Paraguas", "Estrella"]
     digits = []
     for digit in d:

@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
 }
+body{
+    background-image: url(../image/calamar.jpg);
+}
 
 .contenedor{
     height: 100vh;
@@ -18,4 +21,11 @@
     align-content: center;
     align-items: center;
     justify-content: center;
+}
+
+.myclassforh1{
+    text-align: center;
+    color: black;
+    -webkit-text-stroke: 0.8px red;
+    width: 75vw;    
 }
