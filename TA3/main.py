@@ -25,7 +25,8 @@ main_html = """
 
 
       numero = getRndInteger(0, 10);
-      letra = ["Manzana", "Pera", "Platano"];
+      /*letra = ["Manzana", "Pera", "Platano"];*/
+      letra=["Cuadrado", "Circulo","Paraguas", "Estrella"];
       random = Math.floor(Math.random() * letra.length);
       aleatorio = letra[random];
 
@@ -130,6 +131,7 @@ def upload():
 def prepare_dataset():
     images = []
     d = ["Platano", "Pera", "Manzana"]
+    d=["Cuadrado", "Circulo","Paraguas", "Estrella"]
     digits = []
     for digit in d:
         filelist = glob.glob('{}/*.png'.format(digit))
@@ -157,6 +159,7 @@ def download_y():
 
 if __name__ == "__main__":
     digits = ['Manzana', 'Pera', 'Platano']
+    digits=['Cuadrado', 'Circulo','Paraguas', 'Estrella']
     for d in digits:
         if not os.path.exists(str(d)):
             os.mkdir(str(d))
